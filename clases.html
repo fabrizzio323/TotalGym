@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+    <link rel="stylesheet" href="css/clases.css">
+</head>
+<body>
+    <header>
+        <h1>Clases</h1>
+        <nav>
+            <a href="index.html" class="btn-inicio">Inicio</a>
+        </nav>
+    </header>
+
+    <!-- Sistema de filtrado -->
+    <section class="filtros">
+        <h2>Filtrar por categoría</h2>
+        <div class="filtro-opciones">
+            <input type="radio" id="todos" name="categoria" checked>
+            <label for="todos">Todos</label>
+
+            <input type="radio" id="musculacion" name="categoria">
+            <label for="musculacion">Musculación</label>
+
+            <input type="radio" id="crossfit" name="categoria">
+            <label for="crossfit">CrossFit</label>
+
+            <input type="radio" id="yoga" name="categoria">
+            <label for="yoga">Yoga</label>
+
+            <input type="radio" id="spinning" name="categoria">
+            <label for="spinning">Spinning</label>
+        </div>
+    </section>
+
+    <!-- Galería tipo "masonry" -->
+    <section class="galeria">
+        <h2>Galería de Clases</h2>
+        <div class="grid">
+            <div class="item musculacion"><img src="img/musculacion1.jpg" alt="Musculación"></div>
+            <div class="item crossfit"><img src="img/crossfit1.jpg" alt="CrossFit"></div>
+            <div class="item yoga"><img src="img/yoga1.jpg" alt="Yoga"></div>
+            <div class="item spinning"><img src="img/spinning1.jpg" alt="Spinning"></div>
+            <div class="item musculacion"><img src="img/musculacion2.jpg" alt="Musculación"></div>
+            <div class="item crossfit"><img src="img/crossfit2.jpg" alt="CrossFit"></div>
+            <div class="item yoga"><img src="img/yoga2.jpg" alt="Yoga"></div>
+            <div class="item spinning"><img src="img/spinning2.jpg" alt="Spinning"></div>
+        </div>
+    </section>
+
+    <!-- Tabla de horarios -->
+    <section class="horarios">
+        <h2>Horarios Semanales</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Clase</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunes</td>
+                    <td>Musculación</td>
+                    <td>8:00 - 10:00</td>
+                </tr>
+                <tr>
+                    <td>Martes</td>
+                    <td>Yoga</td>
+                    <td>10:00 - 11:00</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>CrossFit</td>
+                    <td>18:00 - 19:00</td>
+                </tr>
+                <tr>
+                    <td>Jueves</td>
+                    <td>Spinning</td>
+                    <td>19:00 - 20:00</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>Musculación</td>
+                    <td>8:00 - 10:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymTotal - Página Principal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css"> <!-- Vincula tu archivo CSS -->
+</head>
+<body>
+    <!-- Encabezado con mega-menú -->
+    <header>
+        <nav>
+            <h1 class="titulo">Gym Total</h1>
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li>
+                    <a href="#">Clases</a>
+                    <ul class="submenu">
+                        <li><a href="clases.html">Yoga</a></li>
+                        <li><a href="clases.html">Pilates</a></li>
+                        <li><a href="clases.html">CrossFit</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Entrenadores</a>
+                    <ul class="submenu">
+                        <li><a href="entrenadores.html">Personal Trainers</a></li>
+                        <li><a href="entrenadores.html">Especialistas</a></li>
+                    </ul>
+                </li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero con video de fondo -->
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="videos/entrenamiento.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <div class="hero-overlay">
+            <h1>Bienvenido a GymTotal</h1>
+            <p>Transforma tu vida con nosotros</p>
+        </div>
+    </section>
+
+    <!-- Clases destacadas -->
+    <section class="clases-destacadas">
+        <h2>Clases Destacadas</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="img/yoga1.jpg" alt="Clase de Yoga">
+                <h3>Yoga</h3>
+                <p>Relaja tu mente y fortalece tu cuerpo.</p>
+            </div>
+            <div class="card">
+                <img src="img/pilates1.jpg" alt="Clase de Pilates">
+                <h3>Pilates</h3>
+                <p>Mejora tu postura y flexibilidad.</p>
+            </div>
+            <div class="card">
+                <img src="img/crossfit1.jpg" alt="Clase de CrossFit">
+                <h3>CrossFit</h3>
+                <p>Desafía tus límites con entrenamientos intensos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contador animado -->
+    <section class="contador">
+        <h2>Únete a nuestra comunidad</h2>
+        <div class="contador-items">
+            <div class="contador-item">
+                <span class="contador-numero" data-target="500">0</span>
+                <p>Socios Satisfechos</p>
+            </div>
+            <div class="contador-item">
+                <span class="contador-numero" data-target="50">0</span>
+                <p>Clases Semanales</p>
+            </div>
+            <div class="contador-item">
+                <span class="contador-numero" data-target="20">0</span>
+                <p>Entrenadores Expertos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios en carrusel -->
+       <section class="testimonios">
+        <h2>Lo que dicen nuestros socios</h2>
+        <div class="carrusel">
+            <div class="testimonio">
+                <p>"GymTotal cambió mi vida. Los entrenadores son increíbles."</p>
+                <span>- María López</span>
+            </div>
+            <div class="testimonio">
+                <p>"Las clases de CrossFit son desafiantes pero muy gratificantes."</p>
+                <span>- Juan Pérez</span>
+            </div>
+            <div class="testimonio">
+                <p>"El ambiente es muy motivador. ¡Me encanta venir aquí!"</p>
+                <span>- Ana García</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="newsletter">
+            <h3>Suscríbete a nuestro Newsletter</h3>
+            <form action="#" method="POST">
+                <input type="email" placeholder="Ingresa tu correo" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+        <div class="redes-sociales">
+            <h3>Síguenos</h3>
+            <a href="#"><img src="iconos/facebook-brands.svg" alt="Facebook"></a>
+            <a href="#"><img src="iconos/instagram-brands.svg" alt="Instagram"></a>
+            <a href="#"><img src="iconos/twitter-brands.svg" alt="Twitter"></a>
+        </div>
+        <div class="contacto">
+            <button onclick="window.location.href='contacto.html'">Formulario de Contacto</button>
+        </div>
+        <div class="mapa">
+            <h3>Encuéntranos</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.419415484681!3d37.77492927975954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0e4c5b1%3A0x4c8b0b9b0f4b0b0b!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1616161616161!5m2!1sen!2s" 
+                width="100%" 
+                height="200" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+        
+    </footer>
+</body>
+</html>

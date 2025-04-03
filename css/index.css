@@ -1,0 +1,444 @@
+/* Variables CSS para colores y temas */
+:root {
+    --color-bg: #f8f9fa; /* Fondo claro */
+    --color-text: #333; /* Texto oscuro */
+    --color-primary: #007bff; /* Azul principal */
+    --color-secondary: #e0e0e0; /* Gris claro */
+    --color-hover: #0056b3; /* Azul oscuro */
+    --color-focus: #ffc107; /* Amarillo para focus */
+    --color-valid: #28a745; /* Verde para campos válidos */
+    --color-invalid: #dc3545; /* Rojo para campos inválidos */
+}
+
+:root[data-theme='dark'] {
+    --color-bg: #121212; /* Fondo oscuro */
+    --color-text: #f8f9fa; /* Texto claro */
+    --color-primary: #1e88e5; /* Azul claro */
+    --color-secondary: #333; /* Gris oscuro */
+    --color-hover: #1565c0; /* Azul más oscuro */
+    --color-focus: #ffca28; /* Amarillo claro */
+}
+
+:root {
+    --font-primary: 'Poppins', sans-serif; /* Fuente principal */
+}
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    scroll-snap-type: y mandatory; /* Scroll Snap */
+    overflow-y: scroll;
+}
+/* Estilo general */
+body {
+    font-family: var(--font-primary); /* Aplica la fuente principal */
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    scroll-snap-type: y mandatory; /* Scroll Snap */
+    overflow-y: scroll;
+}
+
+section {
+    scroll-snap-align: start; /* Scroll Snap */
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color-primary); /* Fondo azul */
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex; /* Flexbox para alinear elementos */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: space-between; /* Espacio entre el título y el menú */
+}
+
+.titulo {
+    font-size: 1.8rem;
+    color: #fff; /* Texto blanco */
+    margin: 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaciado entre los elementos del menú */
+    margin: 0;
+    padding: 0;
+}
+.titulo {
+    font-family: var(--font-primary); /* Aplica la fuente al título */
+    font-size: 1.8rem;
+    color: #fff; /* Texto blanco */
+    margin: 0;
+}
+
+.menu li a {
+    font-family: var(--font-primary); /* Aplica la fuente al menú */
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: var(--color-focus); /* Amarillo al pasar el mouse */
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-secondary); /* Fondo gris */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+submenu li a {
+    font-family: var(--font-primary); /* Aplica la fuente a los submenús */
+    color: var(--color-text); /* Texto oscuro */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.submenu li a {
+    color: var(--color-text); /* Texto oscuro */
+    font-size: 1rem;
+}
+/* Submenús */
+.submenu {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute;
+    top: 100%; /* Alinea el submenú justo debajo del elemento principal */
+    left: 0;
+    background-color: var(--color-secondary); /* Fondo gris claro */
+    padding: 10px 0; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    z-index: 1000; /* Asegura que el submenú esté por encima de otros elementos */
+    min-width: 150px; /* Ancho mínimo del submenú */
+}
+
+.menu li:hover .submenu {
+    display: block; /* Muestra el submenú al pasar el mouse */
+}
+
+.submenu li {
+    padding: 5px 15px; /* Espaciado interno para cada opción */
+}
+
+.submenu li a {
+    color: var(--color-text); /* Texto oscuro */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1rem; /* Tamaño de fuente */
+    display: block; /* Asegura que el enlace ocupe todo el ancho del elemento */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+.submenu li a:hover {
+    background-color: var(--color-hover); /* Fondo azul oscuro al pasar el mouse */
+    color: #fff; /* Texto blanco */
+    border-radius: 3px; /* Bordes redondeados al pasar el mouse */
+}
+
+/* Sección Hero */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    font-size: 1.5rem;
+}
+.hero-overlay h1,
+.hero-overlay p {
+    font-family: var(--font-primary); /* Aplica la fuente a la sección Hero */
+}
+
+/* Clases destacadas */
+.clases-destacadas {
+    text-align: center;
+}
+
+.clases-destacadas h2 {
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+.clases-destacadas h2,
+.card h3,
+.card p {
+    font-family: var(--font-primary); /* Aplica la fuente a las clases destacadas */
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Forma creativa */
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: var(--color-primary);
+}
+
+.card p {
+    padding: 0 10px 20px;
+    color: var(--color-text);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contador animado */
+.contador {
+    text-align: center;
+    background-color: var(--color-secondary);
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.contador h2 {
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.contador-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contador-item {
+    text-align: center;
+}
+
+.contador-numero {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    animation: contadorAnim 2s ease-in-out forwards;
+}
+.contador h2,
+.contador-numero,
+.contador-item p {
+    font-family: var(--font-primary); /* Aplica la fuente al contador */
+}
+
+@keyframes contadorAnim {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Testimonios */
+.testimonios {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.testimonios h2 {
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+/* Carrusel */
+.carrusel {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll; /* Habilita el desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Activa el scroll snap */
+    padding: 10px;
+    scrollbar-width: none; /* Oculta la barra de desplazamiento en navegadores compatibles */
+}
+
+.carrusel::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en navegadores WebKit */
+}
+
+.testimonio {
+    flex: 0 0 300px; /* Cada testimonio ocupa un ancho fijo */
+    scroll-snap-align: center; /* Alinea cada testimonio al centro al hacer scroll */
+    background-color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonio:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+.testimonio p {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+.testimonio span {
+    font-size: 0.9rem;
+    color: var(--color-hover);
+    font-weight: bold;
+}
+.testimonios h2,
+.testimonio p,
+.testimonio span {
+    font-family: var(--font-primary); /* Aplica la fuente a los testimonios */
+}
+/* Pie de página */
+footer {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
+footer form button {
+    padding: 10px 20px;
+    background-color: var(--color-hover);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+footer form button:hover {
+    background-color: var(--color-focus);
+}
+
+footer .redes-sociales a img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer .redes-sociales a img:hover {
+    transform: scale(1.2);
+}
+footer h3,
+footer form input,
+footer form button {
+    font-family: var(--font-primary); /* Aplica la fuente al pie de página */
+}
+/* Botón de contacto */
+.contacto button {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-hover)); /* Degradado azul */
+    color: #fff; /* Texto blanco */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    border-radius: 50px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano al pasar */
+    transition: all 0.3s ease; /* Transición suave para hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+.contacto button:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    background: linear-gradient(45deg, var(--color-hover), var(--color-primary)); /* Invertir degradado */
+}
+
+.contacto button:focus {
+    outline: 2px solid var(--color-focus); /* Enfoque accesible */
+    outline-offset: 4px;
+}
+
+.contacto button:active {
+    transform: scale(0.95); /* Reduce ligeramente el tamaño al hacer clic */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}

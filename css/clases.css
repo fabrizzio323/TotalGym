@@ -1,0 +1,198 @@
+/* Variables CSS para colores y temas */
+:root {
+    --color-bg: #f8f9fa; /* Fondo claro */
+    --color-text: #333; /* Texto oscuro */
+    --color-primary: #007bff; /* Azul principal */
+    --color-secondary: #e0e0e0; /* Gris claro */
+    --color-hover: #0056b3; /* Azul oscuro */
+    --color-focus: #ffc107; /* Amarillo para focus */
+}
+
+:root[data-theme='dark'] {
+    --color-bg: #121212; /* Fondo oscuro */
+    --color-text: #f8f9fa; /* Texto claro */
+    --color-primary: #1e88e5; /* Azul claro */
+    --color-secondary: #333; /* Gris oscuro */
+    --color-hover: #1565c0; /* Azul más oscuro */
+    --color-focus: #ffca28; /* Amarillo claro */
+}
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    scroll-snap-type: y mandatory; /* Scroll Snap */
+    overflow-y: scroll;
+}
+
+header {
+    background-color: var(--color-primary);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #fff; /* Texto blanco */
+}
+
+nav a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-focus); /* Amarillo */
+}
+
+/* Botón de inicio */
+.btn-inicio {
+    display: inline-block;
+    padding: 12px 25px; /* Espaciado interno */
+    background: linear-gradient(45deg, var(--color-primary), var(--color-hover)); /* Degradado dinámico */
+    color: #fff; /* Texto blanco */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centra el texto */
+    text-decoration: none; /* Sin subrayado */
+    border: none; /* Sin bordes */
+    border-radius: 50px; /* Bordes completamente redondeados */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+    cursor: pointer; /* Cursor de mano al pasar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    position: relative; /* Para efectos adicionales */
+    overflow: hidden; /* Oculta el contenido que sobresale */
+}
+
+.btn-inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Efecto de brillo */
+    transform: skewX(-45deg);
+    transition: left 0.5s ease;
+}
+
+.btn-inicio:hover::before {
+    left: 100%; /* Mueve el brillo hacia la derecha */
+}
+
+.btn-inicio:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.btn-inicio:focus {
+    outline: 2px solid var(--color-focus); /* Enfoque accesible */
+    outline-offset: 4px;
+}
+
+.btn-inicio:active {
+    transform: scale(0.95); /* Reduce ligeramente el tamaño al hacer clic */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}
+
+/* Sistema de filtrado */
+.filtros {
+    padding: 20px;
+    text-align: center;
+}
+
+.filtro-opciones input {
+    display: none;
+}
+
+.filtro-opciones label {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: var(--color-secondary); /* Gris claro */
+    color: var(--color-text); /* Texto oscuro */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filtro-opciones input:checked + label {
+    background-color: var(--color-primary); /* Azul */
+    color: #fff; /* Texto blanco */
+}
+
+/* Galería tipo "masonry" */
+.galeria {
+    padding: 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.grid .item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-secondary); /* Borde gris claro */
+    border-radius: 5px;
+    background-color: #fff; /* Fondo blanco */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); /* Forma creativa */
+}
+
+.grid .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.grid .item:hover img {
+    transform: scale(1.1);
+}
+
+/* Tabla de horarios */
+.horarios {
+    padding: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid var(--color-secondary); /* Borde gris claro */
+}
+
+table th, table td {
+    border: 1px solid var(--color-secondary); /* Borde gris claro */
+    padding: 10px;
+    text-align: center;
+    color: var(--color-text); /* Texto oscuro */
+}
+
+table th {
+    background-color: var(--color-primary); /* Azul */
+    color: #fff; /* Texto blanco */
+}
+
+/* Elimina las animaciones */
+.filtros, .galeria, .horarios {
+    animation: none; /* Desactiva cualquier animación */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9rem;
+    }
+}
