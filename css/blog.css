@@ -1,3 +1,58 @@
+/* 
+Archivo: blog.css
+Descripción: Este archivo contiene los estilos CSS para un blog, incluyendo soporte para modo oscuro, diseño tipo "newspaper", galería tipo masonry, sistema de comentarios, y más.
+
+Secciones principales:
+1. Variables CSS:
+    - Define colores principales, secundarios, de fondo, texto, y otros para temas claro y oscuro.
+
+2. Modo Oscuro:
+    - Estilos específicos para el modo oscuro, incluyendo colores de fondo, texto, y efectos visuales.
+
+3. Tabla de Precios:
+    - Estilos para tablas de precios en modo oscuro, con bordes redondeados y sombras.
+
+4. Galería tipo Masonry:
+    - Estilos para una galería de imágenes con diseño tipo masonry, incluyendo efectos hover y clip-path.
+
+5. Comentarios:
+    - Estilos para la sección de comentarios, incluyendo avatares, contenido, y bordes.
+
+6. Botón de Modo Oscuro:
+    - Estilos para un botón que permite alternar entre modo claro y oscuro, con transiciones y micro-interacciones.
+
+7. Estilo General:
+    - Estilos básicos para el cuerpo del documento, incluyendo tipografía, márgenes, y colores.
+
+8. Encabezado del Blog:
+    - Estilos para el encabezado del blog, con colores y tipografía destacados.
+
+9. Sistema de Tags:
+    - Estilos para un sistema de etiquetas (tags) con botones interactivos.
+
+10. Diseño tipo "newspaper" con CSS Grid:
+     - Estilos para organizar publicaciones del blog en un diseño tipo periódico usando CSS Grid.
+
+11. Efecto Scroll Reveal:
+     - Estilos para animar publicaciones del blog al hacer scroll.
+
+12. Sección de Comentarios:
+     - Estilos para la sección de comentarios, incluyendo diseño y espaciado.
+
+13. Galería tipo Masonry:
+     - Estilos para una galería de imágenes con diseño tipo masonry, incluyendo transiciones y sombras.
+
+14. Footer:
+     - Estilos para el pie de página, con enlaces interactivos y diseño centrado.
+
+15. Keyframes para animaciones:
+     - Define animaciones para efectos de revelado al hacer scroll.
+
+16. Accesibilidad:
+     - Estilos para mejorar la accesibilidad, como contornos visibles en botones y enlaces al enfocarse.
+
+Nota: Este archivo utiliza variables CSS para facilitar la personalización de colores y temas, y emplea transiciones y animaciones para mejorar la experiencia del usuario.
+*/
 /* Variables CSS para colores y temas */
 :root {
     --color-primary: #007bff;

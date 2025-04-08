@@ -1,3 +1,47 @@
+/* 
+Archivo: contacto.css
+Descripción: Este archivo contiene los estilos para la página de contacto, incluyendo soporte para modo oscuro, estilos de formulario, botones y un modal de confirmación.
+
+Secciones principales:
+1. Variables CSS
+    - Define colores, fuentes y otros valores reutilizables para el diseño claro y oscuro.
+
+2. Botón de Modo Oscuro
+    - Estilos para un botón que permite alternar entre modo claro y oscuro.
+
+3. Modo Oscuro
+    - Estilos específicos para el modo oscuro, aplicados al cuerpo y elementos del formulario.
+
+4. Estilo General
+    - Estilos básicos para el cuerpo, encabezado y otros elementos globales.
+
+5. Botón de Inicio
+    - Estilos para un botón de navegación ubicado en la parte superior izquierda.
+
+6. Formulario de Contacto
+    - Estilos para el formulario de contacto, incluyendo campos de entrada, etiquetas y el botón de envío.
+
+7. Validación de Campos
+    - Estilos para campos válidos e inválidos, así como para estados de enfoque.
+
+8. Botón de Envío
+    - Estilos para el botón de envío, incluyendo animaciones y un spinner de carga.
+
+9. Modal de Confirmación
+    - Estilos para un modal emergente que confirma la acción del usuario.
+
+10. Fondo Oscuro del Modal
+     - Estilos para el fondo semitransparente que aparece detrás del modal.
+
+11. Pie de Página
+     - Estilos para el footer, incluyendo enlaces de navegación y texto.
+
+Detalles adicionales:
+- Uso de variables CSS para facilitar la personalización de colores y fuentes.
+- Transiciones suaves para mejorar la experiencia del usuario.
+- Compatibilidad con scroll snap para una navegación más fluida.
+- Uso de animaciones para mejorar la interacción visual (por ejemplo, spinner de carga y transformaciones en botones).
+*/
 /* Variables CSS */
 :root {
     --color-bg: #f8f9fa; /* Fondo claro */

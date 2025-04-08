@@ -1,3 +1,102 @@
+/* 
+
+===========================================
+DOCUMENTACIÓN DEL ARCHIVO CSS
+===========================================
+
+1. VARIABLES CSS PARA TEMAS
+-------------------------------------------
+- Define variables CSS para colores y fuentes.
+- Incluye configuraciones para temas claro y oscuro.
+- Variables principales:
+    - --color-bg: Color de fondo.
+    - --color-text: Color del texto.
+    - --color-primary: Color principal (azul).
+    - --color-secondary: Color secundario (gris).
+    - --color-hover: Color para hover (azul oscuro).
+    - --color-focus: Color para enfoque (amarillo).
+    - --font-primary: Fuente principal ('Poppins').
+
+2. MODO OSCURO
+-------------------------------------------
+- Estilos específicos para el modo oscuro.
+- Cambia colores de fondo y texto para elementos como:
+    - body, .card, .contador, .testimonios, footer, y botones.
+
+3. ESTILO GENERAL
+-------------------------------------------
+- Configura el estilo base del body:
+    - Fuente, márgenes, colores, transiciones y scroll snap.
+- Aplica la fuente principal a todo el documento.
+
+4. SECCIÓN HEADER
+-------------------------------------------
+- Estilo para el encabezado:
+    - Fondo azul, diseño con flexbox, y alineación de elementos.
+- Estilo del título (.titulo):
+    - Tamaño de fuente, color blanco, y alineación.
+- Estilo del menú de navegación (nav y .menu):
+    - Diseño con flexbox, espaciado entre elementos, y transiciones.
+- Submenús (.submenu):
+    - Ocultos por defecto, visibles al pasar el mouse.
+    - Fondo gris claro, bordes redondeados, y sombra.
+
+5. BOTÓN DE MODO OSCURO
+-------------------------------------------
+- Estilo para el botón que activa el modo oscuro:
+    - Fondo azul, texto blanco, bordes redondeados, y transiciones.
+    - Efectos de hover, active y focus.
+
+6. SECCIÓN HERO
+-------------------------------------------
+- Estilo para la sección principal (hero):
+    - Altura completa, video de fondo, y superposición de texto.
+- Estilo del texto en la superposición:
+    - Tamaño de fuente, color blanco, y animación de entrada.
+
+7. CLASES DESTACADAS
+-------------------------------------------
+- Estilo para la sección de clases destacadas:
+    - Títulos con color azul, tarjetas con fondo gris claro.
+- Tarjetas (.card):
+    - Bordes redondeados, sombra, y transiciones al hover.
+    - Imágenes con forma creativa usando clip-path.
+
+8. CONTADOR ANIMADO
+-------------------------------------------
+- Estilo para el contador animado:
+    - Fondo gris claro, texto centrado, y animaciones para números.
+- Animación personalizada (@keyframes count):
+    - Incrementa los números desde 0 hasta el valor final.
+
+9. TESTIMONIOS
+-------------------------------------------
+- Estilo para la sección de testimonios:
+    - Fondo claro, texto centrado, y carrusel animado.
+- Carrusel (.carrusel):
+    - Animación infinita para deslizar testimonios.
+- Testimonios individuales (.testimonio):
+    - Fondo gris claro, bordes redondeados, y sombra.
+
+10. PIE DE PÁGINA (FOOTER)
+-------------------------------------------
+- Estilo para el pie de página:
+    - Fondo azul, texto blanco, y diseño centrado.
+- Formulario en el footer:
+    - Campos de entrada y botones con bordes redondeados y transiciones.
+- Iconos de redes sociales:
+    - Tamaño ajustado y efecto de escala al hover.
+
+11. BOTÓN DE CONTACTO
+-------------------------------------------
+- Estilo para el botón de contacto:
+    - Degradado azul, texto blanco, bordes redondeados, y sombra.
+    - Efectos de hover, focus y active con transiciones suaves.
+
+===========================================
+FIN DE LA DOCUMENTACIÓN
+===========================================
+*/
 
 /* Variables CSS para temas */
 :root {

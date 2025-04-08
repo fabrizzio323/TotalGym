@@ -1,3 +1,53 @@
+/* 
+Archivo: clases.css
+Descripción: Este archivo contiene los estilos principales para la página web, incluyendo temas dinámicos, botones, tablas, galería y elementos responsivos.
+
+Secciones principales:
+1. Variables CSS para colores y temas
+    - Define colores dinámicos para el tema claro y oscuro utilizando variables CSS.
+    - Incluye colores de fondo, texto, primarios, secundarios, hover, focus y destacados.
+
+2. Botón de Modo Oscuro
+    - Estilo para un botón que permite alternar entre el modo claro y oscuro.
+    - Incluye efectos de hover, active y transiciones suaves.
+
+3. Estilo general del cuerpo (body)
+    - Define el fondo, color del texto, fuente y transiciones para el cuerpo de la página.
+    - Implementa scroll snap para una experiencia de desplazamiento fluida.
+
+4. Encabezado (header)
+    - Estilo para el encabezado principal, incluyendo el color de fondo y texto.
+    - Define el diseño del título y enlaces de navegación.
+
+5. Tabla de horarios
+    - Estilo para tablas, incluyendo colores dinámicos para el fondo, bordes y texto.
+    - Incluye transiciones para cambios de color y diseño responsivo.
+
+6. Botón de Inicio
+    - Botón con diseño atractivo y degradado dinámico.
+    - Incluye efectos de hover, active y sombras.
+
+7. Sistema de filtrado
+    - Estilo para un sistema de filtros con opciones seleccionables.
+    - Cambia el color de fondo y texto al seleccionar una opción.
+
+8. Galería tipo "masonry"
+    - Diseño de galería con un sistema de cuadrícula adaptable.
+    - Incluye efectos de hover para imágenes y bordes redondeados.
+
+9. Responsividad
+    - Ajustes para dispositivos con un ancho máximo de 768px.
+    - Reduce el tamaño de fuente en tablas para mejorar la legibilidad.
+
+10. Pie de página (footer)
+     - Estilo para el pie de página, incluyendo colores dinámicos y enlaces.
+     - Incluye transiciones para hover en los enlaces.
+
+Notas adicionales:
+- Se utilizan transiciones suaves para mejorar la experiencia del usuario.
+- Se desactivan animaciones en ciertas secciones como filtros, galería y horarios.
+- Se asegura que los elementos clave como botones tengan un alto índice z para estar visibles.
+*/
 /* Variables CSS para colores y temas */
 :root {
     --color-bg: #f8f9fa; /* Fondo claro */

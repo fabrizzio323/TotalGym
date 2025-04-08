@@ -1,3 +1,44 @@
+/* 
+Archivo: entrenadores.css
+Descripción: Este archivo contiene los estilos CSS para la página de entrenadores, incluyendo temas claros y oscuros, botones, tarjetas, barras de habilidades, sistema de rating y el diseño general de la página.
+
+Secciones:
+1. Variables CSS
+    - Define colores dinámicos para el tema claro y oscuro.
+    - Incluye colores para fondo, texto, elementos principales, hover, focus y destacados.
+
+2. Botón de Inicio
+    - Estilo para un botón flotante con degradado, sombra y efectos de hover y active.
+
+3. General
+    - Estilo base para el cuerpo de la página, incluyendo tipografía, colores dinámicos y transiciones suaves.
+    - Estilo para el encabezado y títulos.
+
+4. Navegación
+    - Estilo para enlaces de navegación con efectos de hover.
+
+5. Botón de Modo Oscuro
+    - Estilo para un botón que permite alternar entre temas claro y oscuro.
+    - Incluye efectos de hover y active.
+
+6. Tarjetas
+    - Estilo para tarjetas con efecto de volteo 3D.
+    - Incluye diseño para el frente y reverso de las tarjetas.
+
+7. Barra de Habilidades
+    - Estilo para barras de progreso que representan habilidades.
+    - Incluye animación para cargar el progreso.
+
+8. Sistema de Rating
+    - Estilo para un sistema de calificación con estrellas.
+    - Incluye efectos de hover para destacar las estrellas.
+
+9. Footer
+    - Estilo para el pie de página con enlaces y efectos de hover.
+
+10. Modo Oscuro
+     - Estilo específico para el modo oscuro, ajustando colores de fondo, texto y elementos interactivos.
+*/
 /* Variables CSS */
 :root {
     --color-bg: #f8f9fa; /* Fondo claro */
@@ -15,6 +56,7 @@
     --color-secondary: #333; /* Gris oscuro */
     --color-hover: #1565c0; /* Azul más oscuro */
     --color-focus: #ffca28; /* Amarillo claro */
+    --color-highlight: #ffeb3b; /* Amarillo para destacar */
 }
 /* Botón de Inicio */
 .btn-inicio {

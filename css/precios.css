@@ -1,3 +1,68 @@
+/* 
+
+Descripción general:
+Este archivo contiene los estilos CSS para la página de precios de TotalGym. Incluye variables CSS, estilos generales, 
+modo oscuro, botones interactivos, tabla de precios y el pie de página.
+
+Secciones documentadas:
+1. Variables CSS
+2. Estilos para el modo oscuro
+3. Botón de Modo Oscuro
+4. Estilo general
+5. Encabezado (header)
+6. Botón de inicio
+7. Toggle de precios
+8. Tabla de precios
+9. Planes de precios
+10. Botón de selección de plan
+11. Toggle precios mensual/anual
+12. Pie de página (footer)
+
+/* 1. Variables CSS */
+/* Define colores, fuentes y estilos reutilizables para toda la página. */
+
+/* 2. Estilos para el modo oscuro */
+/* Cambia los colores de fondo, texto y elementos clave para un tema oscuro. */
+
+/* 3. Botón de Modo Oscuro */
+/* Estilo para el botón que permite alternar entre el modo claro y oscuro. 
+    Incluye efectos de hover y active para mejorar la interacción del usuario. */
+
+/* 4. Estilo general */
+/* Define estilos básicos para el cuerpo de la página, como fuente, márgenes, 
+    colores de fondo y transiciones suaves. */
+
+/* 5. Encabezado (header) */
+/* Estilo para el encabezado de la página, incluyendo el título principal. 
+    Utiliza colores primarios y centrado de texto. */
+
+/* 6. Botón de inicio */
+/* Botón flotante con un degradado dinámico, sombras y transiciones suaves. 
+    Posicionado en la esquina superior izquierda de la página. */
+
+/* 7. Toggle de precios */
+/* Estilo para el interruptor que permite alternar entre precios mensuales y anuales. 
+    Incluye etiquetas y un checkbox escalado. */
+
+/* 8. Tabla de precios */
+/* Contenedor principal para los planes de precios. Incluye un título, 
+    diseño flexible para los planes y espaciado uniforme. */
+
+/* 9. Planes de precios */
+/* Estilo para cada plan de precios, incluyendo colores, bordes redondeados, 
+    sombras y efectos de hover. Los planes destacados tienen un borde especial. */
+
+/* 10. Botón de selección de plan */
+/* Botón dentro de cada plan para seleccionar una opción. Incluye transiciones 
+    y efectos de hover/focus para mejorar la accesibilidad. */
+
+/* 11. Toggle precios mensual/anual */
+/* Lógica visual para alternar entre precios mensuales y anuales. 
+    Oculta o muestra los precios según el estado del checkbox. */
+
+/* 12. Pie de página (footer) */
+/* Estilo para el pie de página, con colores primarios, texto centrado y enlaces 
+    interactivos que cambian de color al pasar el cursor. */
 /* Variables CSS */
 :root {
     --color-bg: #f8f9fa; /* Fondo claro */
