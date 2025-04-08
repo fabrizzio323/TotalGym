@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Fitness</title>
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+    <header class="blog-header">
+        <h1>Blog de Fitness</h1>
+        <p>Tu fuente de inspiración para un estilo de vida saludable</p>
+        <button id="dark-mode-toggle" class="btn-modo-oscuro">Modo Oscuro</button>
+    </header>
+
+    <!-- Sistema de Tags y Categorías -->
+    <nav class="tags">
+        <button data-category="yoga">Yoga</button>
+        <button data-category="nutricion">Nutrición</button>
+        <button data-category="entrenamiento">Entrenamiento</button>
+        <button data-category="bienestar">Bienestar</button>
+        <button data-category="todas" class="active">Todas</button>
+    </nav>
+
+    <!-- Artículos del Blog -->
+    <main class="blog-grid">
+        <article class="blog-post" data-category="yoga">
+            <h2>Beneficios del Yoga</h2>
+            <p>Descubre cómo el yoga puede transformar tu cuerpo y mente.</p>
+        </article>
+        <article class="blog-post" data-category="nutricion">
+            <h2>Alimentación Saludable</h2>
+            <p>Consejos para mantener una dieta equilibrada y nutritiva.</p>
+        </article>
+        <article class="blog-post" data-category="entrenamiento">
+            <h2>Rutinas de Entrenamiento</h2>
+            <p>Ejercicios para mejorar tu fuerza y resistencia.</p>
+        </article>
+        <article class="blog-post" data-category="bienestar">
+            <h2>Bienestar Mental</h2>
+            <p>Prácticas para reducir el estrés y mejorar tu calidad de vida.</p>
+        </article>
+    </main>
+        <!-- Galería tipo Masonry -->
+    <section class="galeria">
+        <h2>Galería de Fitness</h2>
+        <div class="masonry-grid">
+            <div class="masonry-item"><img src="img/masonry1.jpg" alt="Foto 1"></div>
+            <div class="masonry-item"><img src="img/masonry2.jpg" alt="Foto 2"></div>
+            <div class="masonry-item"><img src="img/masonry3.jpg" alt="Foto 3"></div>
+            <div class="masonry-item"><img src="img/masonry4.jpg" alt="Foto 4"></div>
+            <div class="masonry-item"><img src="img/masonry5.jpeg" alt="Foto 5"></div>
+            <div class="masonry-item"><img src="img/masonry6.jpeg" alt="Foto 6"></div>
+            <div class="masonry-item"><img src="img/masonry7.jpeg" alt="Foto 7"></div>
+            <div class="masonry-item"><img src="img/masonry8.jpg" alt="Foto 8"></div>
+            <div class="masonry-item"><img src="img/masonry9.jpg" alt="Foto 9"></div>
+            <div class="masonry-item"><img src="img/masonry10.jpg" alt="Foto 10"></div>
+        </div>
+    </section>
+
+    <!-- Sección de Comentarios -->
+    <section class="comentarios">
+        <h2>Comentarios</h2>
+        <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <h3>Juan Pérez</h3>
+                <p>¡Excelente artículo! Me ayudó mucho a mejorar mi rutina diaria.</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <h3>María López</h3>
+                <p>Gracias por los consejos de nutrición, son muy útiles.</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <h3>Carlos Gómez</h3>
+                <p>Las rutinas de entrenamiento son justo lo que necesitaba. ¡Gracias!</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <h3>Lucía Fernández</h3>
+                <p>El artículo sobre bienestar mental me ayudó a reducir mi estrés. ¡Muy bueno!</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <h3>Pedro Martínez</h3>
+                <p>Me encantó la galería de fotos, muy inspiradora.</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <h3>Laura Sánchez</h3>
+                <p>Los consejos de yoga son muy prácticos. ¡Gracias por compartir!</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <h3>Andrés Ramírez</h3>
+                <p>Este blog es mi fuente favorita de información sobre fitness.</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <h3>Elena Torres</h3>
+                <p>¡Qué buen contenido! Espero leer más artículos pronto.</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <h3>Diego Herrera</h3>
+                <p>Gracias por los consejos de alimentación, me han sido de gran ayuda.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-contenido">
+            <p>&copy; 2025 TotalGym. Todos los derechos reservados.</p>
+            <nav>
+                <a href="contacto.html">Contacto</a> | 
+                <a href="precios.html">Precios</a> | 
+                <a href="index.html">Inicio</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleButton.textContent = document.body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Oscuro';
+        });
+    </script>
+</body>
+</html>

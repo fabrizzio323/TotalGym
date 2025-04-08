@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios</title>
+    <link rel="stylesheet" href="css/precios.css"> <!-- Vincula el archivo CSS -->
+</head>
+<body>
+    <header>
+        <h1>Planes y Precios</h1>
+        <nav>
+            <a href="index.html" class="btn-inicio">Inicio</a>
+        </nav>
+        <button id="dark-mode-toggle" class="btn-modo-oscuro">Modo Oscuro</button>
+    </header>
+
+    <main>
+        <section class="toggle-precios">
+            <label for="toggle-plan" class="toggle-label">Plan Mensual / Anual</label>
+            <input type="checkbox" id="toggle-plan" class="toggle-checkbox">
+        </section>
+
+        <section class="tabla-precios">
+            <h2>Comparador de Planes</h2>
+            <div class="planes">
+                <!-- Plan Básico -->
+                <div class="plan" tabindex="0" aria-label="Plan Básico">
+                    <h3>Básico</h3>
+                    <p class="precio mensual">$20/mes</p>
+                    <p class="precio anual">$200/año</p>
+                    <ul>
+                        <li data-tooltip="Incluye acceso limitado">Acceso limitado</li>
+                        <li data-tooltip="Sin clases grupales">Sin clases grupales</li>
+                        <li data-tooltip="Sin acceso a entrenadores">Sin entrenadores</li>
+                    </ul>
+                    <button class="btn-seleccionar">Seleccionar</button>
+                </div>
+
+                <!-- Plan Estándar -->
+                <div class="plan destacado" tabindex="0" aria-label="Plan Estándar">
+                    <h3>Estándar</h3>
+                    <p class="precio mensual">$40/mes</p>
+                    <p class="precio anual">$400/año</p>
+                    <ul>
+                        <li data-tooltip="Incluye acceso ilimitado">Acceso ilimitado</li>
+                        <li data-tooltip="Clases grupales incluidas">Clases grupales</li>
+                        <li data-tooltip="Acceso a entrenadores limitados">Entrenadores limitados</li>
+                    </ul>
+                    <button class="btn-seleccionar">Seleccionar</button>
+                </div>
+
+                <!-- Plan Premium -->
+                <div class="plan" tabindex="0" aria-label="Plan Premium">
+                    <h3>Premium</h3>
+                    <p class="precio mensual">$60/mes</p>
+                    <p class="precio anual">$600/año</p>
+                    <ul>
+                        <li data-tooltip="Incluye acceso ilimitado">Acceso ilimitado</li>
+                        <li data-tooltip="Clases grupales premium">Clases premium</li>
+                        <li data-tooltip="Entrenadores personales incluidos">Entrenadores personales</li>
+                    </ul>
+                    <button class="btn-seleccionar">Seleccionar</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-contenido">
+                <p>&copy; 2025 TotalGym. Todos los derechos reservados.</p>
+                <nav>
+                    <a href="contacto.html">Contacto</a> | 
+                    <a href="precios.html">Precios</a> | 
+                    <a href="index.html">Inicio</a>
+                </nav>
+            </div>
+        </footer>
+    </main>
+
+        <script>
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleButton.textContent = document.body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Oscuro';
+        });
+    </script>
+</body>
+</html>

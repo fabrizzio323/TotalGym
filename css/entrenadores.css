@@ -1,40 +1,22 @@
-/* Estilo general */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa; /* Fondo gris claro */
-    color: #333; /* Texto oscuro */
+/* Variables CSS */
+:root {
+    --color-bg: #f8f9fa; /* Fondo claro */
+    --color-text: #333; /* Texto oscuro */
+    --color-primary: #007bff; /* Azul principal */
+    --color-secondary: #e0e0e0; /* Gris claro */
+    --color-hover: #0056b3; /* Azul oscuro */
+    --color-focus: #ffc107; /* Amarillo para focus */
 }
 
-header {
-    background-color: #007bff; /* Azul */
-    padding: 10px 20px;
-    text-align: center;
-    position: relative; /* Asegura que los elementos dentro del header sean visibles */
-    z-index: 10; /* Coloca el header por encima de otros elementos */
+:root[data-theme='dark'] {
+    --color-bg: #121212; /* Fondo oscuro */
+    --color-text: #f8f9fa; /* Texto claro */
+    --color-primary: #1e88e5; /* Azul claro */
+    --color-secondary: #333; /* Gris oscuro */
+    --color-hover: #1565c0; /* Azul más oscuro */
+    --color-focus: #ffca28; /* Amarillo claro */
 }
-
-header h1 {
-    margin: 0;
-    color: #fff; /* Texto blanco */
-}
-
-h2 {
-    color: #007bff; /* Azul */
-}
-
-/* Estilos para los enlaces de navegación */
-nav {
-    display: flex; /* Asegura que los enlaces estén alineados horizontalmente */
-    justify-content: center; /* Centra los enlaces dentro del contenedor */
-    gap: 15px; /* Espaciado entre los enlaces */
-    margin-top: 10px; /* Espaciado superior */
-    position: relative; /* Asegura que los enlaces sean visibles */
-    z-index: 10; /* Asegura que los enlaces estén por encima de otros elementos */
-}
-
-/* Botón de inicio */
+/* Botón de Inicio */
 .btn-inicio {
     display: inline-block;
     padding: 12px 25px; /* Espaciado interno */
@@ -49,24 +31,9 @@ nav {
     transition: all 0.3s ease; /* Transición suave para todos los cambios */
     cursor: pointer; /* Cursor de mano al pasar */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
-    position: relative; /* Para efectos adicionales */
-    overflow: hidden; /* Oculta el contenido que sobresale */
-}
-
-.btn-inicio::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 300%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* Efecto de brillo */
-    transform: skewX(-45deg);
-    transition: left 0.5s ease;
-}
-
-.btn-inicio:hover::before {
-    left: 100%; /* Mueve el brillo hacia la derecha */
+    position: absolute; /* Posiciona el botón */
+    left: 30px; /* Distancia desde la izquierda */
+    bottom: 30px; /* Distancia desde la parte inferior */
 }
 
 .btn-inicio:hover {
@@ -78,17 +45,86 @@ nav {
     transform: scale(0.95); /* Reduce ligeramente el tamaño al hacer clic */
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
 }
-/* Sección de entrenadores */
-.entrenadores {
-    padding: 20px;
-    text-align: center;
-    background-color: #ffffff; /* Fondo blanco */
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg); /* Fondo dinámico */
+    color: var(--color-text); /* Texto dinámico */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+header {
+    background-color: var(--color-primary); /* Azul dinámico */
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff; /* Texto blanco */
+}
+
+h2 {
+    color: var(--color-primary); /* Azul dinámico */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+nav a {
+    color: var(--color-primary);
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-hover);
+}
+
+/* Botón de Modo Oscuro */
+.btn-modo-oscuro {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    margin-left: auto;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.btn-modo-oscuro:hover {
+    background-color: var(--color-hover);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-modo-oscuro:active {
+    background-color: #003f7f;
+    transform: scale(0.95);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tarjetas */
 .tarjetas {
     display: flex;
     justify-content: center;
-    gap: 70px; /* Aumenta el espacio entre las tarjetas */
+    gap: 70px;
     flex-wrap: wrap;
 }
 
@@ -121,7 +157,7 @@ nav {
 }
 
 .tarjeta-front {
-    background: #ffffff; /* Fondo blanco */
+    background: var(--color-secondary);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,8 +172,8 @@ nav {
 }
 
 .tarjeta-back {
-    background: #f8f9fa; /* Fondo gris claro */
-    color: #333; /* Texto oscuro */
+    background: var(--color-primary);
+    color: var(--color-text);
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
@@ -146,40 +182,111 @@ nav {
     padding: 20px;
 }
 
-/* Habilidades */
+/* Barra de Habilidades */
 .habilidades {
     width: 100%;
     margin-top: 10px;
 }
 
 .habilidad {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .habilidad span {
     display: block;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    color: #333; /* Texto oscuro */
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--color-text); /* Texto dinámico */
 }
 
 .barra {
     width: 100%;
-    height: 10px;
-    background: #e0e0e0; /* Fondo gris claro */
-    border-radius: 5px;
+    height: 20px; /* Altura más visible */
+    background: var(--color-secondary); /* Fondo gris claro */
+    border: 2px solid var(--color-primary); /* Contorno azul */
+    border-radius: 12px; /* Bordes redondeados */
     overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra externa */
 }
 
 .progreso {
     height: 100%;
-    background: #007bff; /* Azul */
-    border-radius: 5px;
+    background: var(--color-primary); /* Azul para el progreso */
+    border-radius: 12px; /* Bordes redondeados */
+    width: 0; /* Ancho inicial */
+    animation: cargar 2s ease-out forwards; /* Animación para el progreso */
+    transition: width 0.5s ease-out; /* Transición suave al cambiar el ancho */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra interna */
 }
 
-/* Rating */
+@keyframes cargar {
+    to {
+        width: 90%; /* Cambia dinámicamente según la habilidad */
+    }
+}
+
+/* Sistema de Rating */
 .rating {
     margin-top: 10px;
     font-size: 1.5rem;
-    color: #ffc107; /* Amarillo */
+    color: var(--color-focus);
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.rating span {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.rating span:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20rem;
+}
+
+footer nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+footer nav a:hover {
+    color: var(--color-focus);
+}
+
+/* Modo Oscuro */
+body.dark-mode {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .tarjeta-front,
+body.dark-mode .tarjeta-back {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+}
+
+body.dark-mode nav a,
+body.dark-mode footer nav a {
+    color: var(--color-primary);
+}
+
+body.dark-mode nav a:hover,
+body.dark-mode footer nav a:hover {
+    color: var(--color-hover);
 }

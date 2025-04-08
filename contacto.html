@@ -11,6 +11,7 @@
         <h1>Formulario de Contacto</h1>
         <nav>
             <a href="index.html" class="btn-inicio">Inicio</a>
+            <button id="dark-mode-toggle" class="btn-modo-oscuro">Modo Oscuro</button>
         </nav>
     </header>
 
@@ -33,6 +34,23 @@
                 <button type="submit" class="btn-enviar">Enviar</button>
             </form>
         </section>
+                <footer>
+            <div class="footer-contenido">
+                <p>&copy; 2025 TotalGym. Todos los derechos reservados.</p>
+                <nav>
+                    <a href="contacto.html">Contacto</a> | 
+                    <a href="precios.html">Precios</a> | 
+                    <a href="index.html">Inicio</a>
+                </nav>
+            </div>
+        </footer>
     </main>
+        <script>
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleButton.textContent = document.body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Oscuro';
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,337 @@
+/* Variables CSS para colores y temas */
+:root {
+    --color-primary: #007bff;
+    --color-secondary: #0056b3;
+    --color-background: #f4f4f4;
+    --color-text: #333;
+    --color-white: #fff;
+    --color-focus: #ff5722;
+}
+:root[data-theme='dark'] {
+    --color-bg: #121212; /* Fondo oscuro */
+    --color-text: #f8f9fa; /* Texto claro */
+    --color-primary: #1e88e5; /* Azul claro */
+    --color-secondary: #333; /* Gris oscuro */
+    --color-hover: #1565c0; /* Azul más oscuro */
+    --color-focus: #ffca28; /* Amarillo claro */
+    --color-highlight: #ffeb3b; /* Amarillo para destacar */
+}
+
+/* Modo Oscuro */
+
+body.dark-mode {
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto claro */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode header a:hover {
+    color: #ffffff;
+}
+
+/* Tabla de Precios */
+body.dark-mode .tabla-precios {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Galería tipo Masonry */
+/* Título de la Galería */
+/* Título de la Galería en Modo Oscuro */
+body.dark-mode .galeria h2 {
+    color: #ffffff; /* Color blanco para el título */
+}
+body.dark-mode .galeria {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .masonry-item img {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .masonry-item img:hover {
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Comentarios */
+body.dark-mode .comentarios {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .comentario {
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+}
+
+body.dark-mode .comentario:last-child {
+    border-bottom: none;
+}
+
+body.dark-mode .comentario .avatar {
+    background-color: #bb86fc;
+}
+
+body.dark-mode .comentario .contenido h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .comentario .contenido p {
+    color: #bbbbbb;
+}
+
+/* Botón de Modo Oscuro */
+.btn-modo-oscuro {
+    background-color: #007bff; /* Azul */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Posiciona el botón */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+}
+
+.btn-modo-oscuro:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.btn-modo-oscuro:active {
+    background-color: #003f7f; /* Azul aún más oscuro */
+    transform: scale(0.95); /* Reduce ligeramente el tamaño */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    scroll-snap-type: y mandatory; /* Scroll Snap */
+}
+
+/* Encabezado del Blog */
+.blog-header {
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 20px;
+}
+
+.blog-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.blog-header p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+}
+
+/* Sistema de Tags */
+.tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tags button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tags button:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.1); /* Micro-interacción */
+}
+
+.tags button.active {
+    background-color: var(--color-secondary);
+}
+
+/* Diseño tipo "newspaper" con CSS Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-align: start; /* Scroll Snap */
+}
+
+.blog-post {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.blog-post h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+}
+
+.blog-post p {
+    margin: 0;
+}
+
+/* Efecto Scroll Reveal */
+.blog-post.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sección de Comentarios */
+.comentarios {
+    padding: 20px;
+    background-color: var(--color-white);
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comentarios h2 {
+    margin-bottom: 20px;
+}
+
+.comentario {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    position: relative;
+}
+
+.avatar::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+}
+
+.contenido h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.contenido p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+
+/* Galería tipo Masonry */
+.galeria {
+    padding: 20px;
+    background-color: var(--color-white);
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.galeria h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: var(--color-text);
+}
+
+/* Masonry Grid */
+.masonry-grid {
+    column-count: 3;
+    column-gap: 10px;
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Clip-path */
+}
+
+.masonry-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.masonry-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20rem;
+}
+
+footer .footer-contenido p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+footer nav a:hover {
+    color: var(--color-secondary);
+}
+
+/* Keyframes para animaciones */
+@keyframes scroll-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Accesibilidad */
+button:focus, a:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}

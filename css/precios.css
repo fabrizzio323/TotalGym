@@ -1,0 +1,263 @@
+/* Variables CSS */
+:root {
+    --color-bg: #f8f9fa; /* Fondo claro */
+    --color-text: #333; /* Texto oscuro */
+    --color-primary: #007bff; /* Azul principal */
+    --color-secondary: #e0e0e0; /* Gris claro */
+    --color-hover: #0056b3; /* Azul oscuro */
+    --color-focus: #ffc107; /* Amarillo para focus */
+    --color-highlight: #ffeb3b; /* Amarillo para destacar */
+    --font-primary: 'Poppins', sans-serif; /* Fuente principal */
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .plan {
+    background-color: #1e1e1e;
+    border-color: #bb86fc;
+}
+body.dark-mode .btn-seleccionar {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+/* Botón de Modo Oscuro */
+.btn-modo-oscuro {
+    background-color: #007bff; /* Azul */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Posiciona el botón */
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde la derecha */
+}
+
+.btn-modo-oscuro:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.btn-modo-oscuro:active {
+    background-color: #003f7f; /* Azul aún más oscuro */
+    transform: scale(0.95); /* Reduce ligeramente el tamaño */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}
+/* Estilo general */
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background-color: var(--color-primary);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Botón de inicio */
+.btn-inicio {
+    position: absolute; /* Posiciona el botón de forma absoluta */
+    top: 20px; /* Distancia desde la parte superior */
+    left: 20px; /* Distancia desde la izquierda */
+    background: linear-gradient(45deg, var(--color-primary), var(--color-hover)); /* Degradado dinámico */
+    color: #fff; /* Texto blanco */
+    padding: 12px 25px; /* Espaciado interno */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centra el texto */
+    text-decoration: none; /* Sin subrayado */
+    border: none; /* Sin bordes */
+    border-radius: 50px; /* Bordes completamente redondeados */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+    cursor: pointer; /* Cursor de mano al pasar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.btn-inicio:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.btn-inicio:active {
+    transform: scale(0.95); /* Reduce ligeramente el tamaño al hacer clic */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}
+/* Toggle de precios */
+.toggle-precios {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.toggle-label {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.toggle-checkbox {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+/* Tabla de precios */
+.tabla-precios {
+    text-align: center;
+    padding: 20px;
+}
+
+.tabla-precios h2 {
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.planes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.plan.destacado {
+    border: 2px solid var(--color-highlight);
+}
+
+.plan h3 {
+    margin: 0 0 10px;
+    color: var(--color-primary);
+}
+
+.plan .precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    display: none; /* Oculta los precios por defecto */
+}
+
+.plan .precio.mensual {
+    display: block; /* Muestra los precios mensuales por defecto */
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.plan ul li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.plan ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
+.plan ul li[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 20px;
+    top: -25px;
+    background-color: var(--color-hover);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.btn-seleccionar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-seleccionar:hover {
+    background-color: var(--color-hover);
+    transform: scale(1.05);
+}
+
+.btn-seleccionar:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 4px;
+}
+
+/* Toggle precios mensual/anual */
+.toggle-checkbox:checked ~ .tabla-precios .precio.mensual {
+    display: none;
+}
+
+.toggle-checkbox:checked ~ .tabla-precios .precio.anual {
+    display: block;
+}
+footer {
+    background-color: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30rem;
+}
+
+footer .footer-contenido p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+footer nav a:hover {
+    color: var(--color-focus);
+}

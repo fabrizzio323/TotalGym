@@ -15,8 +15,127 @@
     --color-secondary: #333; /* Gris oscuro */
     --color-hover: #1565c0; /* Azul más oscuro */
     --color-focus: #ffca28; /* Amarillo claro */
+    --color-highlight: #ffeb3b; /* Amarillo para destacar */
+}
+/* Botón de Modo Oscuro */
+.btn-modo-oscuro {
+    background-color: #007bff; /* Azul */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Posiciona el botón */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
 }
 
+.btn-modo-oscuro:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.btn-modo-oscuro:active {
+    background-color: #003f7f; /* Azul aún más oscuro */
+    transform: scale(0.95); /* Reduce ligeramente el tamaño */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}
+/* Modo oscuro*/
+body {
+    background-color: var(--color-bg); /* Fondo dinámico */
+    color: var(--color-text); /* Texto dinámico */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+header {
+    background-color: var(--color-primary); /* Azul dinámico */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #fff; /* Texto blanco */
+}
+
+nav a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-focus); /* Amarillo */
+}
+/* Tabla de horarios */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: var(--color-secondary); /* Fondo dinámico */
+    border: 1px solid var(--color-secondary); /* Borde dinámico */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+table th, table td {
+    border: 1px solid var(--color-secondary); /* Borde dinámico */
+    padding: 10px;
+    text-align: center;
+    color: var(--color-text); /* Texto dinámico */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+table th {
+    background-color: var(--color-primary); /* Fondo dinámico para encabezados */
+    color: #fff; /* Texto blanco */
+}
+
+table td {
+    background-color: var(--color-bg); /* Fondo dinámico para celdas */
+    color: var(--color-text); /* Texto dinámico */
+}
+.btn-modo-oscuro {
+    background-color: var(--color-primary); /* Azul dinámico */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.btn-modo-oscuro:hover {
+    background-color: var(--color-hover); /* Azul más oscuro */
+    transform: scale(1.05);
+}
+footer {
+    background-color: var(--color-primary); /* Azul dinámico */
+    color: var(--color-text); /* Texto dinámico */
+    text-align: center;
+    padding: 20px;
+}
+
+footer nav a {
+    color: var(--color-text); /* Texto dinámico */
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    color: var(--color-focus); /* Amarillo */
+}
 /* Estilo general */
 body {
     font-family: Arial, sans-serif;
@@ -51,13 +170,18 @@ nav a {
 nav a:hover {
     color: var(--color-focus); /* Amarillo */
 }
+nav{
+    padding :20px;
+}
 
-/* Botón de inicio */
+/* Botón de Inicio */
 .btn-inicio {
-    display: inline-block;
-    padding: 12px 25px; /* Espaciado interno */
+    position: absolute; /* Posiciona el botón de forma absoluta */
+    top: 20px; /* Distancia desde la parte superior */
+    left: 20px; /* Distancia desde la izquierda */
     background: linear-gradient(45deg, var(--color-primary), var(--color-hover)); /* Degradado dinámico */
     color: #fff; /* Texto blanco */
+    padding: 12px 25px; /* Espaciado interno */
     font-size: 1.2rem; /* Tamaño de fuente */
     font-weight: bold; /* Texto en negrita */
     text-align: center; /* Centra el texto */
@@ -67,34 +191,12 @@ nav a:hover {
     transition: all 0.3s ease; /* Transición suave para todos los cambios */
     cursor: pointer; /* Cursor de mano al pasar */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
-    position: relative; /* Para efectos adicionales */
-    overflow: hidden; /* Oculta el contenido que sobresale */
-}
-
-.btn-inicio::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 300%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* Efecto de brillo */
-    transform: skewX(-45deg);
-    transition: left 0.5s ease;
-}
-
-.btn-inicio:hover::before {
-    left: 100%; /* Mueve el brillo hacia la derecha */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 .btn-inicio:hover {
     transform: scale(1.1); /* Aumenta ligeramente el tamaño */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-}
-
-.btn-inicio:focus {
-    outline: 2px solid var(--color-focus); /* Enfoque accesible */
-    outline-offset: 4px;
 }
 
 .btn-inicio:active {
@@ -195,4 +297,28 @@ table th {
     table {
         font-size: 0.9rem;
     }
+}
+footer {
+    background-color: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer .footer-contenido p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+footer nav a:hover {
+    color: var(--color-focus);
 }

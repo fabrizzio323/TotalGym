@@ -1,28 +1,61 @@
-/* Variables CSS para colores y temas */
+
+/* Variables CSS para temas */
 :root {
     --color-bg: #f8f9fa; /* Fondo claro */
     --color-text: #333; /* Texto oscuro */
     --color-primary: #007bff; /* Azul principal */
     --color-secondary: #e0e0e0; /* Gris claro */
     --color-hover: #0056b3; /* Azul oscuro */
-    --color-focus: #ffc107; /* Amarillo para focus */
-    --color-valid: #28a745; /* Verde para campos válidos */
-    --color-invalid: #dc3545; /* Rojo para campos inválidos */
+    --color-focus: #ffc107; /* Amarillo */
 }
 
-:root[data-theme='dark'] {
+:root[data-theme="dark"] {
     --color-bg: #121212; /* Fondo oscuro */
-    --color-text: #f8f9fa; /* Texto claro */
+    --color-text: #ffffff; /* Texto claro */
     --color-primary: #1e88e5; /* Azul claro */
-    --color-secondary: #333; /* Gris oscuro */
+    --color-secondary: #1e1e1e; /* Gris oscuro */
     --color-hover: #1565c0; /* Azul más oscuro */
     --color-focus: #ffca28; /* Amarillo claro */
 }
-
 :root {
     --font-primary: 'Poppins', sans-serif; /* Fuente principal */
 }
-/* Estilo general */
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .card {
+    background-color:#1565c0;
+    color:  #ffffff;
+}
+
+body.dark-mode .contador {
+    background-color: #1565c0;
+    color:  #ffffff;
+}
+
+body.dark-mode .testimonios {
+    background-color: #1e1e1e;
+    color:  #ffffff;
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color:  #ffffff;
+}
+
+body.dark-mode footer form button {
+    background-color: #1565c0;
+    color: #ffffff; /* Texto blanco para contraste */
+}
+body {
+    background-color: #121212;
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -54,40 +87,33 @@ section {
 header {
     background-color: var(--color-primary); /* Fondo azul */
     padding: 10px 20px;
-}
-
-nav {
     display: flex; /* Flexbox para alinear elementos */
     align-items: center; /* Alinea verticalmente los elementos */
     justify-content: space-between; /* Espacio entre el título y el menú */
+    position: relative;
 }
-
+/* Título */
 .titulo {
     font-size: 1.8rem;
     color: #fff; /* Texto blanco */
-    margin: 0;
+    margin: 0; /* Sin margen adicional */
+    font-family: var(--font-primary); /* Fuente principal */
+    text-align: left; /* Alinea el texto a la izquierda */
+    flex-shrink: 0; /* Evita que el título se reduzca */
 }
 
+/* Menú */
+nav {
+    flex-grow: 1; /* Permite que el menú ocupe el espacio disponible */
+    display: flex; /* Flexbox para centrar el menú */
+    justify-content: center; /* Centra el menú horizontalmente */
+}
 .menu {
     list-style: none;
     display: flex;
     gap: 20px; /* Espaciado entre los elementos del menú */
     margin: 0;
     padding: 0;
-}
-.titulo {
-    font-family: var(--font-primary); /* Aplica la fuente al título */
-    font-size: 1.8rem;
-    color: #fff; /* Texto blanco */
-    margin: 0;
-}
-
-.menu li a {
-    font-family: var(--font-primary); /* Aplica la fuente al menú */
-    color: #fff; /* Texto blanco */
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
 }
 .menu li {
     position: relative;
@@ -104,31 +130,7 @@ nav {
     color: var(--color-focus); /* Amarillo al pasar el mouse */
 }
 
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--color-secondary); /* Fondo gris */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-submenu li a {
-    font-family: var(--font-primary); /* Aplica la fuente a los submenús */
-    color: var(--color-text); /* Texto oscuro */
-    text-decoration: none;
-    font-size: 1rem;
-}
 
-.menu li:hover .submenu {
-    display: block;
-}
-
-.submenu li a {
-    color: var(--color-text); /* Texto oscuro */
-    font-size: 1rem;
-}
 /* Submenús */
 .submenu {
     display: none; /* Oculta el submenú por defecto */
@@ -165,6 +167,30 @@ submenu li a {
     border-radius: 3px; /* Bordes redondeados al pasar el mouse */
 }
 
+/* Botón de Modo Oscuro */
+.btn-modo-oscuro {
+    background-color: #007bff; /* Azul */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: auto; /* Empuja el botón hacia la derecha */
+}
+.btn-modo-oscuro:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.btn-modo-oscuro:active {
+    background-color: #003f7f; /* Azul aún más oscuro */
+    transform: scale(0.95); /* Reduce ligeramente el tamaño */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}
 /* Sección Hero */
 .hero {
     position: relative;
@@ -259,7 +285,7 @@ submenu li a {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Contador animado */
+/* Contador Animado */
 .contador {
     text-align: center;
     background-color: var(--color-secondary);
@@ -286,79 +312,99 @@ submenu li a {
     font-size: 2.5rem;
     font-weight: bold;
     color: var(--color-primary);
-    animation: contadorAnim 2s ease-in-out forwards;
-}
-.contador h2,
-.contador-numero,
-.contador-item p {
-    font-family: var(--font-primary); /* Aplica la fuente al contador */
+    animation: count 2s ease-in-out forwards;
 }
 
-@keyframes contadorAnim {
+.contador-item:nth-child(1) .contador-numero {
+    animation-delay: 0s;
+}
+
+.contador-item:nth-child(2) .contador-numero {
+    animation-delay: 0.5s;
+}
+
+.contador-item:nth-child(3) .contador-numero {
+    animation-delay: 1s;
+}
+
+@keyframes count {
     from {
-        opacity: 0;
-        transform: translateY(-20px);
+        content: "0";
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        content: attr(data-target); /* Muestra el valor final */
     }
 }
 
-/* Testimonios */
+/* Estilo general para la sección de testimonios */
 .testimonios {
     text-align: center;
     padding: 40px 20px;
+    background-color: var(--color-bg);
 }
 
 .testimonios h2 {
-    margin-bottom: 20px;
+    font-size: 2rem;
     color: var(--color-primary);
+    margin-bottom: 20px;
 }
 
-/* Carrusel */
+/* Contenedor del carrusel */
+.carrusel-wrapper {
+    overflow: hidden; /* Oculta los elementos fuera del área visible */
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Ancho máximo del carrusel */
+    margin: 0 auto; /* Centra el carrusel */
+    height: 200px;
+}
+
+/* Carrusel que contiene los testimonios */
 .carrusel {
     display: flex;
-    gap: 20px;
-    overflow-x: scroll; /* Habilita el desplazamiento horizontal */
-    scroll-snap-type: x mandatory; /* Activa el scroll snap */
-    padding: 10px;
-    scrollbar-width: none; /* Oculta la barra de desplazamiento en navegadores compatibles */
+    animation: slide 15s infinite; /* Animación infinita con duración ajustada */
 }
 
-.carrusel::-webkit-scrollbar {
-    display: none; /* Oculta la barra de desplazamiento en navegadores WebKit */
-}
-
+/* Cada testimonio */
 .testimonio {
-    flex: 0 0 300px; /* Cada testimonio ocupa un ancho fijo */
-    scroll-snap-align: center; /* Alinea cada testimonio al centro al hacer scroll */
+    flex: 0 0 100%; /* Cada testimonio ocupa el 100% del ancho del carrusel */
+    text-align: center;
     background-color: var(--color-secondary);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.testimonio:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
-}
-
-.testimonio p {
-    font-size: 1rem;
     color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+    0%, 20% {
+        transform: translateX(0); /* Primer testimonio */
+    }
+    25%, 45% {
+        transform: translateX(-100%); /* Segundo testimonio */
+    }
+    50%, 70% {
+        transform: translateX(-200%); /* Tercer testimonio */
+    }
+    75%, 100% {
+        transform: translateX(0); /* Regresa al primer testimonio */
+    }
+}
+
+/* Estilo para el texto del testimonio */
+.testimonio p {
+    font-size: 1.2rem;
+    font-style: italic;
     margin-bottom: 10px;
 }
 
 .testimonio span {
-    font-size: 0.9rem;
-    color: var(--color-hover);
+    font-size: 1rem;
     font-weight: bold;
-}
-.testimonios h2,
-.testimonio p,
-.testimonio span {
-    font-family: var(--font-primary); /* Aplica la fuente a los testimonios */
+    color: var(--color-primary);
 }
 /* Pie de página */
 footer {
@@ -442,3 +488,5 @@ footer form button {
     transform: scale(0.95); /* Reduce ligeramente el tamaño al hacer clic */
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
 }
+
+

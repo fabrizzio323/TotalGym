@@ -11,6 +11,7 @@
         <h1>Total Gym</h1>
         <nav>
             <a href="index.html" class="btn-inicio">Inicio</a>
+            <button id="dark-mode-toggle" class="btn-modo-oscuro">Modo Oscuro</button>
         </nav>
     </header>
 
@@ -80,5 +81,28 @@
             </div>
         </div>
     </section>
+    <footer>
+        <div class="footer-contenido">
+            <p>&copy; 2025 TotalGym. Todos los derechos reservados.</p>
+            <nav>
+                <a href="contacto.html">Contacto</a> | 
+                <a href="precios.html">Precios</a> | 
+                <a href="index.html">Inicio</a>
+            </nav>
+        </div>
+    </footer>
+              <script>
+            const toggleButton = document.getElementById('dark-mode-toggle');
+            toggleButton.addEventListener('click', () => {
+                const htmlElement = document.documentElement; // Selecciona el <html>
+                const isDarkMode = htmlElement.getAttribute('data-theme') === 'dark';
+        
+                // Alterna entre modo claro y oscuro
+                htmlElement.setAttribute('data-theme', isDarkMode ? 'light' : 'dark');
+        
+                // Cambia el texto del botón
+                toggleButton.textContent = isDarkMode ? 'Modo Oscuro' : 'Modo Claro';
+            });
+        </script>
 </body>
 </html>
